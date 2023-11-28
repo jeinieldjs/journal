@@ -4,8 +4,10 @@ one:
   title: MyString
   description: MyText
   category: one
+  due_date: 2023-12-01
 
 two:
   title: MyString
   description: MyText
   category: two
+  due_date: 2023-12-05

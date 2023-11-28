@@ -21,7 +21,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create task" do
     assert_difference("Task.count") do
-      post category_tasks_path(@category), params: {task: {title: @task.title,  description: @task.description}}
+      post category_tasks_path(@category), params: {task: {title: @task.title,  description: @task.description, due_date: @task.due_date}}
     end
 
     assert_redirected_to category_task_path(@category, Task.last)
@@ -38,7 +38,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update task" do
-    patch category_task_path(@category, @task), params: {task: {title: @task.title, description: @task.description}}
+    patch category_task_path(@category, @task), params: {task: {title: @task.title, description: @task.description, due_date: @task.due_date}}
     assert_redirected_to category_task_path(@category, @task)
   end
 
