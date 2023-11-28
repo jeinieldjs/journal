@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <h1><%= @task.title %></h1>
+  <p><%= @task.description %></p>
+</div>
+
+<div>
+  <%= link_to 'Edit', edit_category_task_path(@category, @task) %> |
+  <%= link_to 'Back', category_tasks_path(@category) %>
+  <%= button_to 'Destroy this task', category_task_path(@category, @task), method: :delete %>
+</div>

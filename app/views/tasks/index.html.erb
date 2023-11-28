@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tasks under <%= @category.title %></h1>
+
+<div id="tasks">
+  <% @tasks.each do |task| %>
+    <h2><%= task.title %></h2>
+    <p><%= task.description %></p>
+    <p>
+      <%= link_to 'Show', category_task_path(@category, task) %>
+      | <%= link_to 'Back to Category', category_path(@category) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New task", new_category_task_path(@category) %>
