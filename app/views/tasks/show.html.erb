@@ -1,12 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <div>
-  <h1><%= @task.title %></h1>
-  <p><%= @task.description %></p>
+  <h1 class='task-title'><%= @task.title %></h1>
+  <p class='task-label'>DUE DATE: <span class='due-date'><%= @task.due_date %></span></p>
+  <p class='task-label'>DETAILS: <span class='task-description'><%= @task.description %></span></p>
 </div>
 
 <div>
   <%= link_to 'Edit', edit_category_task_path(@category, @task) %> |
   <%= link_to 'Back', category_tasks_path(@category) %>
-  <%= button_to 'Destroy this task', category_task_path(@category, @task), method: :delete %>
+  <%= button_to 'Delete', category_task_path(@category, @task), method: :delete %>
 </div>
