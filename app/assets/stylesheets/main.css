@@ -45,12 +45,11 @@ a:hover {
     align-items: center;
     justify-content: flex-start;
     border-bottom: solid 1px #305973;
-    /*background-color: #ded5c4;*/
 }
 
 .page-title {
     margin-right: 10px;
-    color:#305973;
+    color:#ef7e56;
 }
 
 .page-body{
@@ -70,7 +69,7 @@ a:hover {
     border-radius: 10px;
     box-shadow: 4px 4px 2px #ef7e56;
 }
-    /*background-color:#fffdf6;*/
+    /*colors: cream: #f9f9f9; beige: #ded5c4; orange: #ef7e56; blue: #305973; */
 
 .categ-title {
     color: #305973;
@@ -84,5 +83,56 @@ a:hover {
 }
 .add-btn {
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 2rem;
 }
+.form-wrapper {
+    padding: 10px;
+    border-radius: 10px;
+    color: #305973;
+}
+.form-body{
+    margin: auto;
+    width: 70%;
+}
+.form-field {
+    width: 60%;
+    padding:5px;
+    border: solid 1px #ef7e56;
+    border-radius: 10px;
+    
+}
+.form-input {
+    margin:auto;
+    width: 70%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+   
+}
+.text-area{
+    height: 200px;
+}
+.form-label {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.button {
+    border: none;
+    background-color:#ef7e56;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.button:hover {
+    border: solid 1px #305973;
+    color: #305973;
+    background-color: white;
+}
+
+   /*.form-pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}*/
