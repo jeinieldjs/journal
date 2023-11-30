@@ -1,16 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class='wrapper'>
+  <div class='page-top'>
+    <h1 class='page-title'>Categories</h1>
+    <span class='add-btn'><%= link_to "+", new_category_path %></span>
+  </div>
+  <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <div>
-      <h1><%= category.title %></h1>
-      <p><%= category.description %></p>
-      <%= link_to "Show this category", category %>
-    </div>
-  <% end %>
+  <div class='page-body'>
+    <% @categories.each do |category| %>
+      <%= render category %>
+      <div class='indiv-categ'>
+        <h2 class='categ-title'><%= link_to(category.title, category) %></h2>
+        <p class='categ-description'><%= category.description %></p>
+        
+      </div>
+    <% end %>
+  </div>
+  
 </div>
-
-<%= link_to "New category", new_category_path %>
