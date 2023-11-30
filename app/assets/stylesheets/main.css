@@ -92,20 +92,22 @@ a:hover {
 }
 .form-body{
     margin: auto;
-    width: 70%;
+    width: 40vw;
+    background-color: #f9f9f9; 
+    padding: 50px 10px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 2px #305973;
 }
 .form-field {
-    width: 60%;
     padding:5px;
     border: solid 1px #ef7e56;
     border-radius: 10px;
-    
+    width: 100%;
 }
 .form-input {
-    margin:auto;
-    width: 70%;
     margin-bottom: 15px;
     border-radius: 5px;
+    padding: 5px 40px;
    
 }
 .text-area{
@@ -128,11 +130,17 @@ a:hover {
     color: #305973;
     background-color: white;
 }
-
-   /*.form-pages {
+.form-pages {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-}*/
+    align-items: center;
+}
+.form-top {
+   margin: auto;
+   text-align: center;
+}
+.form-proper {
+    margin: auto;
+    margin-top: 20px;
+}
