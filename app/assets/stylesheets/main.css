@@ -4,7 +4,7 @@
     font-family: 'Roboto';
 }
 
-a, a:visited {
+a, a:visited, .dlt-button {
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
@@ -12,7 +12,7 @@ a, a:visited {
     padding: 3px;
 }
 
-a:hover {
+a:hover, .dlt-button:hover {
     border: none;
     background-color:#ef7e56;
     color: white;
@@ -130,7 +130,7 @@ a:hover {
     color: #305973;
     background-color: white;
 }
-.form-pages {
+.form-pages, .category-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,4 +143,43 @@ a:hover {
 .form-proper {
     margin: auto;
     margin-top: 20px;
+}
+.categ-top {
+    margin: auto;
+    max-width: 40%;
+}
+.categ-page-title {
+    color: #ef7e56;
+    text-transform: uppercase;
+    text-align: center;
+}
+.categ-page-desc {
+    color: #305973;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: justify;
+
+
+}
+.button-panel {
+    display: flex;
+    flex-direction: row;
+}
+.dlt-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+}
+.task-due {
+    color: red;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 0px;
+}
+.indiv-task {
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 2px #305973
 }
