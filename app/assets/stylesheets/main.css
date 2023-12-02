@@ -18,21 +18,6 @@ a:hover, .dlt-button:hover {
     color: white;
 }
 
-.task-label {
-    font-size: 1rem;
-    font-weight: 700;
-}
-.task-title {
-    color: #305973;
-    text-transform: uppercase;
-}
-.due-date {
-    color: red;
-    font-weight: 600;
-}
-.task-description {
-    font-weight: 400;
-}
 .wrapper {
     width: 100%;
     
@@ -184,4 +169,46 @@ a:hover, .dlt-button:hover {
     border-radius: 10px;
     box-shadow: 4px 4px 2px #305973;
     height: 125px;
+}
+.task-card {
+    box-sizing: border-box;
+    border: solid 1px lightgray;
+    background-color: #ef7e56;
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.task-card-top {
+    color: white;
+    
+}
+
+.task-label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.task-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+}
+.due-date {
+    color: red;
+    font-weight: 600;
+}
+.task-description {
+    font-weight: 400;
+}
+.task-card-body {
+    background-color: white;
+    padding: 25px;
+}
+.task-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
 }
