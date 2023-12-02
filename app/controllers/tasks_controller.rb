@@ -37,7 +37,7 @@ class TasksController < ApplicationController
   
     def destroy
       @task.destroy
-      redirect_to category_tasks_path(@category), notice: 'Successfully deleted the task.'
+      redirect_to category_path(@category), notice: 'Successfully deleted the task.'
     end
   
     private

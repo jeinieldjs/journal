@@ -68,6 +68,7 @@ a:hover, .dlt-button:hover {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 4px 4px 2px #ef7e56;
+    height: 120px;
 }
     /*colors: cream: #f9f9f9; beige: #ded5c4; orange: #ef7e56; blue: #305973; */
 
@@ -96,7 +97,7 @@ a:hover, .dlt-button:hover {
     background-color: #f9f9f9; 
     padding: 50px 10px;
     border-radius: 25px;
-    box-shadow: 4px 4px 2px #305973;
+    box-shadow: 10px 10px 5px #305973;
 }
 .form-field {
     padding:5px;
@@ -181,5 +182,6 @@ a:hover, .dlt-button:hover {
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 4px 4px 2px #305973
+    box-shadow: 4px 4px 2px #305973;
+    height: 125px;
 }

@@ -8,7 +8,7 @@
 
   <div class = 'button-panel'>
     <%= link_to "EDIT", edit_category_path(@category) %> |
-    <%= link_to "BACK", categories_path %> |
+    <%= link_to "HOME", categories_path %> |
     <%= button_to "DELETE", @category, method: :delete, class:'dlt-button' %>
   </div>
 
@@ -24,7 +24,8 @@
         <div class='indiv-task'>
         <h2 class='categ-title'><%= link_to task.title, category_task_path(@category, task)%></h2>
         <p class='task-due'>DEADLINE: <%= task.due_date %></p>
-        <p class='categ-description'><%= task.description %></p>
+        <p class='categ-description'><%= truncate(task.description, length: 90) %></p>
+        
       
       </div>
     <% end %>

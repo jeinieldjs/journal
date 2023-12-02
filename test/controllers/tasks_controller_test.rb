@@ -47,7 +47,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
       delete category_task_path(@category, @task)
     end
 
-    assert_redirected_to category_tasks_path(@category)
+    assert_redirected_to category_path(@category)
   end
 end
 

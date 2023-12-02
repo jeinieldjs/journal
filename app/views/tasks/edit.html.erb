@@ -1,10 +1,14 @@
-<h1>Editing task</h1>
+<div class='form-pages'>
+  <div class='form-top'>
+    <h1 class='page-title form-header'>EDIT TASK</h1>
+    <div>
+      <%= link_to "BACK TO #{@task.title}", category_task_path(@category, @task) %>
+    </div>
+  </div>
 
-<%= render "form", task: @task %>
 
-<br>
+  <div class='form-proper'>
+    <%= render "form", task: @task %>
+  </div>
 
-<div>
-  <%= link_to "Show this task", category_task_path(@category, @task) %> |
-  <%= link_to 'Back', category_task_path(@category, @task) %>
 </div>

@@ -1,9 +1,11 @@
-<h1>New Task</h1>
+<div class='form-pages'>
+  <div class='form-top'>
+    <h1 class='page-title form-header'>NEW TASK</h1>
+    <%= link_to "BACK TO #{@category.title}", category_path(@category) %>
+  </div>
 
-<%= render "form", task: @task %>
-
-<br>
-
-<div>
-  <%= link_to "Back to Category Tasks", category_tasks_path(@category) %>
+  <div class='form-proper'>
+    <%= render "form", task: @task %>
+  </div>
+  
 </div>
