@@ -1,10 +1,11 @@
 <% if user_signed_in? %>
+<p class='notice-container'><%= notice %></p>
 <div class='wrapper'>
   <div class='page-top'>
     <h1 class='page-title'>Categories</h1>
     <span class='add-btn'><%= link_to "+", new_category_path %></span>
   </div>
-  <p style="color: green"><%= notice %></p>
+  
 
   <div class='page-body'>
     <% current_user.categories.each do |category| %>

@@ -4,7 +4,7 @@
     font-family: 'Roboto';
 }
 
-a, a:visited, .dlt-button {
+a, a:visited, .dlt-button  {
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 5px;
@@ -246,4 +246,68 @@ a:hover, .dlt-button:hover {
     font-family: 'Space Mono';
     font-weight: 600;
     font-size: 3rem;
+}
+.notice-container {
+    color: green;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.reg-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+.reg-form {
+    margin: auto;
+    border-radius: 25px;
+    border: solid 1px gray;
+    width: 30%;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+/*TO DO FOR 05DEC2023*/
+
+.reg-form-top {
+    text-transform: uppercase;
+    color: black;
+    border-bottom: solid 1px #305973;
+    width: 100%;
+}
+
+.reg-form-body {
+    padding-top: 20px;
+}
+
+.reg-input {
+    width: 90%; 
+}
+.field {
+    padding-bottom: 15px;
+}
+.submit-btn {
+    color: #305973;
+    border:solid  1px #305973;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 3px;
+    border-radius: 5px; 
+}
+.submit-btn:hover {
+    color: white;
+    background-color: #ef7e56;
+    border:none;
+}
+
+.reg-label {
+    color: #305973;
+    text-transform: uppercase;
+
 }
