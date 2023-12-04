@@ -2,8 +2,8 @@
   <div class='form-top'>
     <h1 class='page-title form-header'>EDIT CATEGORY</h1>
     <div>
-      <%= link_to "Show this category", @category %> |
-      <%= link_to "Back to categories", categories_path %>
+      <%= link_to "Show this category", category_path(@category) %> |
+      <%= link_to "Back to categories", categories_path(@category) %>
     </div>
   </div>
 
@@ -13,4 +13,3 @@
   </div>
 
 </div>
-

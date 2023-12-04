@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+    before_action :authenticate_user!
     before_action :set_category
     before_action :set_task, only: [:show, :edit, :update, :destroy]
   
@@ -41,9 +42,9 @@ class TasksController < ApplicationController
     end
   
     private
-  
+    
     def set_category
-      @category = Category.find(params[:category_id])
+      @category = current_user.categories.find(params[:category_id])
     end
   
     def set_task

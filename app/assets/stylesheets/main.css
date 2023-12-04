@@ -150,6 +150,8 @@ a:hover, .dlt-button:hover {
 .button-panel {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .dlt-button {
     background-color: transparent;
