@@ -1,0 +1,21 @@
+<nav class='nav-bar'>
+    <div class='app-title'>
+        <% if user_signed_in? %>
+            <h1 class='app-name'>Welcome,<span class='journal-text'><%= current_user.email %></span>!</h1>
+        <% else %>
+            <h1 class='app-name'>Rails <span class='journal-text'>Journal</span></h1>
+        <% end %>
+    </div>
+
+    <div class='nav-button'>
+        <ul class='nav-ul'>
+        <% if user_signed_in? %>
+            <li class='nav-li'><%= link_to 'Home', categories_path(@category) %></li>
+            <li class='nav-li'><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+            <li class='nav-li'><%= link_to 'Log in', new_user_session_path %></li>
+            <li class='nav-li'><%= link_to 'Sign up', new_user_registration_path %></li>
+        <% end %>
+        </ul>
+    </div>
+</nav>

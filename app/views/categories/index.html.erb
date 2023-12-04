@@ -1,7 +1,4 @@
 <% if user_signed_in? %>
-  <h1> Welcome, <%= current_user.email %>!</h1> 
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-
 <div class='wrapper'>
   <div class='page-top'>
     <h1 class='page-title'>Categories</h1>
