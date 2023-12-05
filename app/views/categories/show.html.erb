@@ -1,14 +1,20 @@
 <div class = 'category-wrapper'>
   <p style="color: green"><%= notice %></p>
 
-  <div class = 'categ-top'>
-    <h1 class='categ-page-title'><%= @category.title %></h1>
-    <p class ='categ-page-desc'><%= @category.description %></p>
-  </div>
+  <div class='categ-card'>
+    <div class = 'categ-card-top'>
+      <h1 class='categ-page-title'><%= @category.title %></h1>
+    </div>
 
-  <div class = 'button-panel'>
-    <%= link_to "EDIT", edit_category_path(@category) %> |
-    <%= button_to "DELETE", @category, method: :delete, class:'dlt-button' %>
+    <div class='categ-card-body'>
+      <div class='categ-desc-container'>
+        <p class ='categ-page-desc'><%= @category.description %></p>
+      </div>
+      <div class = 'button-panel'>
+        <%= link_to "EDIT", edit_category_path(@category) %> |
+        <%= button_to "DELETE", @category, method: :delete, class:'dlt-button' %>
+      </div>
+    </div>
   </div>
 
   <div class='wrapper'>
