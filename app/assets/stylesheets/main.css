@@ -12,7 +12,7 @@ body {
     background-image: url('https://img.freepik.com/premium-vector/trendy-background-design-memphis-style_608527-842.jpg?w=1060');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     min-height: 100vh;
     overflow: auto;
     box-sizing: border-box;
@@ -368,11 +368,13 @@ a:hover, .dlt-button:hover {
     margin-bottom: 10px;
     border-radius: 5px;
     text-align: center;
+   
     
 }
   
 .flash.notice {
     color: green;
+    background-color: #f6fafbe1;
 }
   
 .flash.alert {
@@ -416,6 +418,7 @@ a:hover, .dlt-button:hover {
     margin-top: 50px;
     border-radius: 25px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 .categ-card-top {
     color: #f6fafb; 

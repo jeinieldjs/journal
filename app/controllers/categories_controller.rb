@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   
     def destroy
       @category.destroy
-      redirect_to categories_path, notice: 'Successfully deleted the category.'
+      redirect_to dashboard_index_path, notice: 'Successfully deleted the category.'
     end
   
     private
