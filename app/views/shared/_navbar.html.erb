@@ -1,9 +1,9 @@
 <nav class='nav-bar'>
     <div class='app-title'>
         <% if user_signed_in? %>
-            <h1 class='app-name'>Welcome,<span class='journal-text'><%= current_user.email %></span>!</h1>
+            <h1 class='logged-greeting'>WELCOME, <span class='logged-user'><%= current_user.email %></span>!</h1>
         <% else %>
-            <h1 class='app-name'>Rails <span class='journal-text'>Journal</span></h1>
+            <h1 class='app-name'>Rails<span class='journal-text'>Journal</span></h1>
         <% end %>
     </div>
 

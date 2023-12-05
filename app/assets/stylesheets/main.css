@@ -214,7 +214,7 @@ a:hover, .dlt-button:hover {
     padding: 10px;
 
 }
-
+/*styles for navbar*/
 .nav-bar {
     color: #305973;
     background-color: #f9f9f9;
@@ -245,6 +245,17 @@ a:hover, .dlt-button:hover {
     color: #ef7e56;
     font-family: 'Space Mono';
     font-weight: 600;
+    font-size: 3rem;
+}
+.logged-greeting {
+    font-family: 'Roboto';
+    padding: 5px;
+    font-size: 3rem;
+    margin: 5px;
+}
+.logged-user {
+    color: #ef7e56;
+    font-family: 'Roboto';
     font-size: 3rem;
 }
 .notice-container {
@@ -327,4 +338,50 @@ a:hover, .dlt-button:hover {
 }
 .log-form-top {
     background-color: #ef7e56;
+}
+
+/*styles for errors*/
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+  
+.flash.notice {
+    color: green;
+}
+  
+.flash.alert {
+    color: red;
+}
+#error_explanation {
+    color: red;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+}
+  
+#error_explanation h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+#error_explanation ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+#error_explanation li {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.error-wrapper {
+    width: 30%;
+    margin: auto;
+}
+.logged {
+    font-family: 'Roboto';
 }
