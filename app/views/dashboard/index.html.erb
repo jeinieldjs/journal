@@ -1,0 +1,40 @@
+<% if user_signed_in? %>
+  <p class='notice-container'><%= notice %></p>
+  <div class='wrapper'>
+    <div class='container'>
+      <div class='page-top'>
+        <h1 class='page-title'>Tasks Due Today</h1>
+      </div>
+      <div class='page-body'>
+        <% @tasks_due.each do |task| %>
+          <%= render task %>
+          <div class='indiv-task'>
+            <h2 class='categ-title'> <h2 class='categ-title'><%= link_to task.title, category_task_path(task.category, task) %></h2></h2>
+            <p class='task-due'>Due Date: <%= task.due_date.strftime("%B %e, %Y") %></p>
+            <p class='categ-description'><%= truncate(task.description, length: 90) %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class='page-top'>
+        <h1 class='page-title'>Categories</h1>
+        <span class='add-btn'><%= link_to "+", new_category_path %></span>
+      </div>
+      <div class='page-body'>
+        <% current_user.categories.each do |category| %>
+          <%= render category %>
+          <div class='indiv-categ'>
+            <h2 class='categ-title'><%= link_to(category.title, category_path(category)) %></h2>
+            <p class='categ-description'><%= truncate(category.description, length: 100) %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<% else %>
+  <%= link_to 'Sign in', new_user_session_path %> |
+  <%= link_to 'Sign up', new_user_registration_path %>
+<% end %>

@@ -6,12 +6,12 @@
     </div>
 
     <div class='task-card-body'>
-      <p class='task-label'>DUE DATE: <span class='due-date'><%= @task.due_date %></span></p>
+      <p class='task-label'>DUE DATE: <span class='due-date'><%= @task.due_date.strftime("%B %e, %Y") %></span></p>
       <p class='task-label'>DETAILS: <span class='task-description'><%= @task.description %></span></p>
   
       <div class = 'button-panel task-buttons'>
         <%= link_to 'Edit', edit_category_task_path(@category, @task) %> |
-        <%= link_to "BACK TO #{@category.title}", category_path(@category) %> |
+        <%= link_to "#{@category.title}", category_path(@category) %> |
         <%= button_to 'Delete', category_task_path(@category, @task), method: :delete, class:'dlt-button' %>
       </div>
     </div>
