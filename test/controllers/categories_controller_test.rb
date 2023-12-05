@@ -4,8 +4,12 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
-setup do
-    @category = categories(:one)
+  include Devise::Test::IntegrationHelpers
+  
+  setup do
+      @user = users(:one)
+      sign_in @user
+      @category = categories(:one)
   end
 
   test 'should get index' do 

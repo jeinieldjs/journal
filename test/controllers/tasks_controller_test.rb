@@ -4,7 +4,11 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
+  include Devise::Test::IntegrationHelpers
+  
   setup do
+    @user = users(:one)
+    sign_in @user
     @category = categories(:one)
     @task = tasks(:one)
   end
