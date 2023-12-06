@@ -40,7 +40,13 @@ class TasksController < ApplicationController
       @task.destroy
       redirect_to category_path(@category), notice: 'Successfully deleted the task.'
     end
-  
+
+    def mark_as_done
+      @task = @category.task.find(params[:id])
+      @task.update(done: task_params[:done])
+      redirect_to @task, notice: 'Task marked as done'
+    end
+
     private
     
     def set_category
@@ -52,6 +58,7 @@ class TasksController < ApplicationController
     end
   
     def task_params
-      params.require(:task).permit(:title, :description, :due_date)
+      params.require(:task).permit(:title, :description, :due_date, :done)
     end
+
 end

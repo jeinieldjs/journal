@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   end
 
   resources :categories do
-    resources :tasks
+    resources :tasks do
+      member do 
+        put 'mark_as_done'
+      end
+    end
   end
 
 

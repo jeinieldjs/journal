@@ -23,9 +23,17 @@
         <%= form.text_area :description, class: 'form-field text-area' %>
       </div>
 
-       <div class='form-input'>
+      <div class='form-input'>
         <%= form.label :due_date, class: 'form-label' %><br>
         <%= form.date_field :due_date, class: 'form-field' %>
+      </div>
+
+      <div class='form-input'>
+        <%= form.label :status, class: 'form-label' %><br>
+        <div class='radio-options'>
+        <%= form.radio_button :done, false, class: 'form-field-radio', checked: !@task.done %> Undone
+        <%= form.radio_button :done, true, class: 'form-field-radio', checked: @task.done %> Done
+        </div>
       </div>
 
       <div class='form-input'>
