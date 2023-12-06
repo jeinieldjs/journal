@@ -463,3 +463,24 @@ a:hover, .dlt-button:hover {
 .form-field-radio:checked {
     accent-color: #f7c858;
 }
+.categ-task-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.undone-task {
+    color:#f6fafb;
+    background-color: #d63d35;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.done-task {
+    color:black;
+    background-color: #f7c858;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+

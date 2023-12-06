@@ -15,7 +15,12 @@
         <% @tasks_due.each do |task| %>
           <%= render task %>
           <div class='indiv-task'>
-            <h2 class='categ-title'> <h2 class='categ-title'><%= link_to task.title, category_task_path(task.category, task) %></h2></h2>
+            <div class='categ-task-top'>
+              <h2 class='categ-title'><%= link_to task.title, category_task_path(task.category, task)%></h2>
+              <p <%= task.done ? "class= done-task" : "class= undone-task" %>>
+                <%= task.done ? 'Done' : 'Undone' %>
+              </p>
+            </div>
             <p class='task-due'>Due Date: <%= task.due_date.strftime("%B %e, %Y") %></p>
             <p class='categ-description'><%= truncate(task.description, length: 90) %></p>
           </div>
