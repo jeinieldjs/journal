@@ -221,8 +221,9 @@ a:hover, .dlt-button:hover {
     color: red;
     font-weight: 600;
 }
-.task-description {
+.task-description, .status {
     font-weight: 400;
+  
 }
 .task-card-body {
     background-color: #f6fafb;

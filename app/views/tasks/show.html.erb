@@ -7,6 +7,13 @@
 
     <div class='task-card-body'>
       <p class='task-label'>DUE DATE: <span class='due-date'><%= @task.due_date.strftime("%B %e, %Y") %></span></p>
+      <p class='task-label'>STATUS:<span class='status'>
+        <% if @task.done %>
+          Done
+        <% else %>
+          Undone
+        <% end %>
+      </span></p>
       <p class='task-label'>DETAILS: <span class='task-description'><%= @task.description %></span></p>
   
       <div class = 'button-panel task-buttons'>
