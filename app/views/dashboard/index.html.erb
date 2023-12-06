@@ -1,10 +1,16 @@
 <% if user_signed_in? %>
   <p class='notice-container'><%= notice %></p>
+  
   <div class='wrapper'>
-    <div class='container'>
+    <div class='date-time-container'>
+      <%= Time.now.strftime('%d %b %Y %H:%M:%S') %>
+    </div>
+
+    <div class='container'>  
       <div class='page-top'>
         <h1 class='page-title'>Tasks Due Today</h1>
       </div>
+    
       <div class='page-body'>
         <% @tasks_due.each do |task| %>
           <%= render task %>
@@ -22,6 +28,7 @@
         <h1 class='page-title'>Categories</h1>
         <span class='add-btn'><%= link_to "+", new_category_path %></span>
       </div>
+     
       <div class='page-body'>
         <% current_user.categories.each do |category| %>
           <%= render category %>
