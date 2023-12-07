@@ -53,6 +53,12 @@ a:hover, .dlt-button:hover {
     background-color: #f6fafbe1;
 }
 
+.page-title-task {
+    margin-right: 10px;
+    color:#d63d35;
+    padding-left: 20px;
+}
+
 .page-body{
     width: 80%;
     margin: auto;
@@ -96,6 +102,7 @@ a:hover, .dlt-button:hover {
     padding: 10px;
     border-radius: 10px;
     color: #187e8a;
+    margin-bottom: 20px;
 }
 .form-body{
     margin: auto;
@@ -103,7 +110,8 @@ a:hover, .dlt-button:hover {
     background-color: #f6fafb; 
     padding: 50px 10px;
     border-radius: 25px;
-    box-shadow: 10px 10px 5px #187e8a;
+    box-shadow: 10px 10px 5px #f7c858;
+    border: solid 1px black;
 }
 .form-field {
     padding:5px;
@@ -167,9 +175,6 @@ a:hover, .dlt-button:hover {
     margin: auto;
     padding: 20px;
     text-align: justify;
-   
-
-
 }
 .button-panel {
     display: flex;
@@ -187,6 +192,8 @@ a:hover, .dlt-button:hover {
     font-weight: 600;
     font-size: 0.8rem;
     margin-top: 0px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
 }
 .indiv-task {
     box-sizing: border-box;
@@ -201,6 +208,13 @@ a:hover, .dlt-button:hover {
 }
 .body-task-card {
     margin: auto;
+}
+.body-task-rows {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 3px;
 }
 
 
@@ -269,7 +283,7 @@ a:hover, .dlt-button:hover {
 }
 .app-name {
     font-family: 'Space Mono';
-    font-weight: 600;
+    font-weight: 700;
     padding: 5px;
     font-size: 3rem;
     margin: 5px;
@@ -280,16 +294,23 @@ a:hover, .dlt-button:hover {
     font-weight: 600;
     font-size: 3rem;
 }
-.logged-greeting {
+.user-info {
+    margin-left: 10px;
+    color: #187e8a;
     font-family: 'Roboto';
-    padding: 5px;
-    font-size: 3rem;
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 600;
+}
+.user-info p {
+    margin: 0px;
 }
 .logged-user {
     color: #d63d35;
-    font-family: 'Roboto';
-    font-size: 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 .notice-container {
     color: green;
@@ -298,6 +319,7 @@ a:hover, .dlt-button:hover {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    background-color: #f6fafbe1;
 }
 
 .reg-wrapper {
@@ -419,6 +441,7 @@ a:hover, .dlt-button:hover {
 }
 .logged {
     font-family: 'Roboto';
+ 
 }
 /*categ cards*/
 .categ-card {

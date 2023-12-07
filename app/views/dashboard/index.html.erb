@@ -7,6 +7,7 @@
     </div>
 
     <div class='container'>  
+     
       <div class='page-top'>
         <h1 class='page-title'>Tasks Due Today</h1>
       </div>
@@ -15,26 +16,49 @@
         <% @tasks_due.each do |task| %>
           <%= render task %>
           <div class='indiv-task'>
-
             <div class='categ-task-top'>
               <h2 class='categ-title'><%= link_to task.title, category_task_path(task.category, task)%></h2>
               <p <%= task.done ? "class= done-task" : "class= undone-task" %>>
                 <%= task.done ? 'Done' : 'Undone' %>
               </p>
             </div>
-
-            <div class = 'body-task-card'>
+            <div class='body-task-card'>
               <p class='task-due'>Due Date: <%= task.due_date.strftime("%d %b %Y") %></p>
-              <p class='categ-description'>Category: <%= link_to task.category.title, category_path(task.category) %></p>
-              <p class='categ-description'><%= truncate(task.description, length: 90) %></p>
+              <p class='body-task-rows'>Category: <%= link_to task.category.title, category_path(task.category) %></p>
+              <p class='body-task-rows'><%= truncate(task.description, length: 90) %></p>
             </div>
-
           </div>
         <% end %>
       </div>
     </div>
 
     <div class='container'>
+      
+      <div class='page-top'>
+        <h1 class='page-title'>Overdue Tasks</h1>
+      </div>
+
+      <div class='page-body'>
+        <% current_user.categories.each do |category| %>
+          <% category.tasks.select { |task| !task.done && task.due_date < Date.today }.each do |task| %>
+            <div class='indiv-task'>
+              <div class='categ-task-top'>
+                <h2 class='categ-title'><%= link_to task.title, category_task_path(task.category, task) %></h2>
+                <p class='undone-task'>Undone</p>
+              </div>
+              <div class='body-task-card'>
+                <p class='task-due'>Due Date: <%= task.due_date.strftime("%d %b %Y") %></p>
+                <p class='body-task-rows'>Category: <%= link_to task.category.title, category_path(task.category) %></p>
+                <p class='body-task-rows'><%= truncate(task.description, length: 90) %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class='container'>
+      
       <div class='page-top'>
         <h1 class='page-title'>Categories</h1>
         <span class='add-btn'><%= link_to "+", new_category_path %></span>

@@ -19,7 +19,7 @@
 
   <div class='wrapper'>
     <div class='page-top'>
-      <h1 class='page-title'>Tasks</h1>
+      <h1 class='page-title-task'>Tasks</h1>
       <span class='add-btn'><%= link_to "+", new_category_task_path(@category) %></span>
     </div>
 
@@ -32,7 +32,6 @@
             <p <%= task.done ? "class= done-task" :  "class= undone-task" %>>
               <%= task.done ? 'Done' : 'Undone' %>
             </p>
-
           </div>
           <p class='task-due'>Due Date: <%= task.due_date.strftime("%B %e, %Y") %></p>
           <p class='categ-description'><%= truncate(task.description, length: 90) %></p>

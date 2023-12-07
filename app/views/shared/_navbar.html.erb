@@ -1,9 +1,12 @@
 <nav class='nav-bar'>
     <div class='app-title'>
         <% if user_signed_in? %>
-            <h1 class='logged-greeting'>WELCOME, <span class='logged-user'><%= current_user.email %></span>!</h1>
+        <div class='user-info'>
+            <p class='logged-user'><%= current_user.email %></p>
+            <p class='member-since'>Member since: <span class='member-date'><%= current_user.created_at.strftime("%d %b %Y") %></span></p>
+        </div>
         <% else %>
-            <h1 class='app-name'>Rails<span class='journal-text'>Journal</span></h1>
+        <h1 class='app-name'>Rails<span class='journal-text'>Journal</span></h1>
         <% end %>
     </div>
 
