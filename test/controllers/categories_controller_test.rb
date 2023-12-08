@@ -54,6 +54,6 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
       delete category_path(@category)
     end
 
-    assert_redirected_to categories_path
+    assert_redirected_to dashboard_index_path
   end
 end
