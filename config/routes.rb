@@ -10,9 +10,6 @@ Rails.application.routes.draw do
 
   resources :categories do
     resources :tasks do
-      member do 
-        put 'mark_as_done'
-      end
     end
   end
 
