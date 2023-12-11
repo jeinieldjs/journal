@@ -479,10 +479,12 @@ a:hover, .dlt-button:hover {
     font-size: 4rem;
     font-weight: 600;
     font-family: 'Space Mono';
-    background-color:  #f6fafbe1;
+    background-color:  #f6fafb;
     margin-bottom: 25px;
     color: #f7c858;
     text-shadow: 2px 2px black;
+    box-shadow: 10px 10px 5px #f7c858;
+    border: solid 3px black;
 }
 
 .radio-options {
