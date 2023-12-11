@@ -5,9 +5,12 @@ one:
   description: MyText
   category: one
   due_date: 2023-12-01
+  done: false
+
 
 two:
   title: MyString
   description: MyText
   category: two
   due_date: 2023-12-05
+  done: true

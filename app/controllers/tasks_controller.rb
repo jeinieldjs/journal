@@ -41,11 +41,11 @@ class TasksController < ApplicationController
       redirect_to category_path(@category), notice: 'Successfully deleted the task.'
     end
 
-    def mark_as_done
-      @task = @category.task.find(params[:id])
-      @task.update(done: task_params[:done])
-      redirect_to @task, notice: 'Task marked as done'
-    end
+    #def mark_as_done
+      #@task = @category.task.find(params[:id])
+      #@task.update(done: task_params[:done])
+      #redirect_to @task, notice: 'Task marked as done'
+    #end
 
     private
     

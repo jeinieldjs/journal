@@ -42,7 +42,7 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update task" do
-    patch category_task_path(@category, @task), params: {task: {title: @task.title, description: @task.description, due_date: @task.due_date}}
+    patch category_task_path(@category, @task), params: {task: {title: @task.title, description: @task.description, due_date: @task.due_date, done: @task.done}}
     assert_redirected_to category_task_path(@category, @task)
   end
 
