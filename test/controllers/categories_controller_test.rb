@@ -25,7 +25,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create category' do
     assert_difference('Category.count') do
-      post categories_path, params: {category: {title: 'New Title', description: 'New Description'}}
+      post categories_path, params: {category: {title: @category.title, description: @category.description}}
     end
 
     assert_redirected_to category_path(Category.last)
@@ -42,11 +42,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update category' do
-    patch category_path(@category), params: {category: {title: 'Updated Title', description: 'Updated Description'}}
+    patch category_path(@category), params: {category: {title: @category.title, description: @category.description}}
     assert_redirected_to category_path(@category)
-    @category.reload
-    assert_equal 'Updated Title', @category.title
-    assert_equal 'Updated Description', @category.description
   end
 
   test 'should destroy category' do

@@ -471,7 +471,6 @@ a:hover, .dlt-button:hover {
     padding-left: 20px;
 }
 .date-time-container {
-    
     border-radius: 25px;
     margin: auto; 
     width: 40%;
@@ -480,7 +479,8 @@ a:hover, .dlt-button:hover {
     font-weight: 600;
     font-family: 'Space Mono';
     background-color:  #f6fafb;
-    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     color: #f7c858;
     text-shadow: 2px 2px black;
     box-shadow: 10px 10px 5px #f7c858;
