@@ -70,6 +70,7 @@ a:hover, .dlt-button:hover {
     padding: 10px;
 }
 .indiv-categ {
+    box-sizing: border-box;
     width: 29%;
     padding: 10px;
     margin: 10px;
